@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='myApp'>
+  <head>
+      <meta charset="UTF-8">
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
+      <script src="main.js"></script>
+      <script src="bower_components/angular/angular.js"></script>
+      <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+      <title>Document</title>
+  </head>
+  <body ng-controller="ctrl">
+    <div class="container">
+        <input type="text" placeholder="Enter your task" ng-model="tempInput">
+        <button ng-click="addNew()">Play</button>
+        <label for="">
+            <select name="">
+            <option value="123" ng-repeat="tasks in tasksArray" placeholder="123">{{tasks}}</option>
+          </select>
+          </label>
+          <input name=stopwatch size=20 ng-model="time">
+          <button ng-click="setInterval()" >start/stop</button>
+    </div>
+    <div>
+      <p ng-repeat="tasks in tasksArray">Ваша цель  {{tasks}}</p>
+
+    </div>
+  </body>
+</html>
